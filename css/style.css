@@ -1,0 +1,334 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html {
+  font-family: "Frank Ruhle Libre", serif;
+  font-size: 10px;
+  display: block;
+}
+
+h1 {
+  width: 30%;
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  height: 100px;
+  background: lightgray;
+}
+
+header span {
+  font-size: 1.8rem;
+  margin-left: 50px;
+}
+
+nav {
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+}
+
+nav ul {
+  width: 50%;
+  float: right;
+}
+
+nav li {
+  list-style: none;
+  display: inline;
+  width: 8%;
+  padding: 0 10px;
+}
+
+/* Main */
+main {
+  background: lightgray;
+}
+
+input {
+  width: 25%;
+}
+
+input + a {
+  width: 5%;
+  background: orange;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 3px 7px;
+}
+
+ul {
+  width: 25%;
+  float: left;
+}
+
+li {
+  display: inline;
+  list-style: none;
+  padding: 0 10px;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+/*2nd Section */
+main + section {
+  clear: both;
+  width: 45%;
+  float: right;
+  margin-right: 10%;
+  background: white;
+  padding-bottom: 50px;
+}
+
+section span {
+  font-size: 1.4rem;
+  color: orange;
+}
+
+section p {
+  font-size: 1.2rem;
+}
+
+section a {
+  font-size: 1.2rem;
+  background: orange;
+  color: white;
+  text-decoration: none;
+  width: 10%;
+  padding: 1% 1%;
+}
+
+/* 3rd section */
+main + section + section {
+  clear: both;
+  text-align: center;
+  padding-top: 50px;
+  background: lightgray;
+}
+
+main + section + section ul {
+  margin-left: 30%;
+  border-bottom: 1px solid darkgray;
+  width: 40%;
+}
+
+main + section + section li {
+  display: inline;
+}
+
+main + section + section a {
+  text-decoration: none;
+  background: none;
+  color: black;
+}
+
+main + section + section section {
+  clear: left;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+main + section + section section img {
+  margin: 10px 10px;
+}
+
+/* 4th section */
+main + section + section + section {
+  clear: both;
+  text-align: center;
+  padding-top: 50px;
+  background: rgb(228, 225, 225);
+}
+
+/* Phone icon */
+main + section + section + section img {
+  width: 25%;
+}
+
+main + section + section + section img + span {
+  display: block;
+  color: black;
+  padding: 1%;
+  padding-bottom: 10px;
+}
+
+/* Phone number */
+main + section + section + section span + span {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Columns */
+main + section + section + section section + section {
+  width: 20%;
+  float: left;
+  margin-left: 20%;
+  background: lightgray;
+}
+
+/* Main image for Section 4 */
+main + section + section + section section + img {
+  width: 60%;
+  padding: 30px 0 50px 0;
+}
+
+/* 5th section */
+main + section + section + section + section {
+  clear: both;
+  text-align: center;
+  padding-top: 50px;
+}
+
+main + section + section + section + section img {
+  border-radius: 50%;
+  padding-bottom: 0;
+}
+
+h5 {
+  margin: 0 auto;
+}
+
+h5 + span {
+  color: gray;
+  font-size: 1.4rem;
+  display: block;
+}
+
+h5 + span + img {
+  padding: 20px;
+}
+
+h5 + span + img + p {
+  font-size: 1.6rem;
+  font-style: italic;
+  padding: 20px 0 50px 0;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* main + section + section + section + section section {
+  width: 50%;
+  float: left;
+}
+
+main + section + section + section + section + section {
+  clear: both;
+  display: block;
+  text-align: center;
+} */
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media screen and (max-width: 400px) {
+  header span {
+    display: none;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  nav li {
+    width: 6%;
+    float: none;
+    padding: 0 1% 0 1%;
+  }
+
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  form + ul {
+    width: 100%;
+    text-align: center;
+  }
+
+  form + ul li {
+    display: inline;
+  }
+
+  main + section {
+    margin-right: 150px;
+  }
+
+  main + section * {
+    width: 100%;
+    text-align: center;
+  }
+
+  h3 + ul {
+    width: 100%;
+    text-align: center;
+  }
+
+  h3 + ul li {
+    width: 10%;
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+
+  main + section + section {
+    margin-right: 75px;
+  }
+
+  main + section + section + section {
+    margin-right: 80px;
+  }
+
+  main + section + section + section + section {
+    margin-right: 100px;
+  }
+}

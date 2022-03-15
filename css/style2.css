@@ -1,0 +1,330 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html {
+  font-family: "Frank Ruhle Libre", serif;
+  font-size: 10px;
+  display: block;
+}
+
+body {
+  background: #8c6456;
+}
+
+h1 {
+  width: 30%;
+  font-size: 5rem;
+}
+
+h2,
+h3 {
+  font-size: 3rem;
+}
+
+h4,
+span {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+/* Main */
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #c7d2d4;
+}
+
+header span {
+  font-family: "Dancing Script", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  margin: 15px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+
+nav li a {
+  color: white;
+  margin: 10px;
+}
+
+nav li a:hover {
+  color: #c7d2d4;
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  width: 100%;
+  height: auto;
+  color: white;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+main img {
+  position: relative;
+  width: 100%;
+}
+
+main h1,
+main form {
+  position: absolute;
+  margin-left: 10%;
+  z-index: 1;
+}
+
+main h1 {
+  top: 20%;
+}
+
+main form {
+  margin-bottom: 10%;
+  font-size: 2rem;
+  top: 60%;
+  width: 25%;
+}
+
+main a {
+  color: white;
+  text-decoration: none;
+  background: #0d0d0d;
+  border: 1px solid #0d0d0d;
+  border-radius: 5%;
+  padding: 1%;
+}
+
+/*2nd Section */
+#aboutUs {
+  /* display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 5%; */
+  width: 100%;
+  height: auto;
+  color: white;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-between;
+  margin-top: 5%;
+}
+
+/* #aboutUs * {
+  margin-left: 40%;
+  color: white;
+} */
+
+#aboutUs p {
+  width: 100%;
+}
+
+#aboutUs a {
+  width: 10%;
+  padding: 2px;
+}
+
+ #aboutUs img {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.textContent {
+  position: absolute;
+  width: 43%;
+  z-index: 1;
+  margin-left: 50%;
+  padding: 2%;
+  color: #591202;
+  background: #d98b2b;
+  margin-right: 30%;
+}
+
+.textContent a {
+  color: white;
+  text-decoration: none;
+  background: #0d0d0d;
+  border: 1px solid #0d0d0d;
+  border-radius: 5%;
+  padding: 1%;
+}
+
+/* 3rd section */
+
+#menu {
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+  padding: 5%;
+  color: #8c6456;
+  background: #c7d2d4;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu ul {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#menu li {
+  margin: 10px;
+}
+
+#menu a {
+  color: #d99771;
+}
+
+#menu a:hover {
+  color: #d98b2b;
+  text-decoration: underline;
+}
+
+#images {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#images img {
+  width: 20%;
+  height: auto;
+  margin: 1%;
+}
+
+/* 4th section */
+
+#hours {
+  width: 100%;
+  height: auto;
+  color: white;
+  text-align: center;
+  margin: 5% 0;
+}
+
+#contact span + span {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+
+#schedule {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 5% auto;
+  width: 40%;
+}
+
+#scheduleLeft,
+#scheduleRight {
+  width: 40%;
+}
+
+video {
+  width: 50%;
+  height: auto;
+}
+
+/* 5th section */
+
+#reviews {
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+  padding: 5%;
+  color: #d99771;
+  background: #c7d2d4;
+  text-align: center;
+}
+
+#reviews p {
+  width: 80%;
+  margin: 5% auto;
+}
+
+#reviews img {
+  width: 10%;
+  height: auto;
+  border-radius: 50%;
+}
+
+#reviews span + img {
+  display: block;
+  border-radius: 0;
+  margin: 10px auto;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+@media screen and (max-width: 400px) {
+    header span {
+        display: none;
+    }
+    
+    nav ul {
+      width: 100%;
+    }
+}
